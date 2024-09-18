@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balthazar&family=Josefin+Sans:wght@400;600&family=League+Gothic&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        h1::before {
+            background-image: url('img/gta2.jpg');
+
+            background-size: 100% 100%;
+
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .container2 {
+            background-color: white;
+            border: 3px solid rgb(235, 232, 232);
+            width: 37%;
+            margin: 35px 813px;
+            position: right;
+            height: 520px;
+        }
+
+        .heading1 {
+            background-color: black;
+            font-size: 54px;
+            color: white;
+            font-family: 'League Gothic', sans-serif;
+            width: 23%;
+            margin: 27px 842px;
+            padding: 20px 23px;
+
+        }
+
+        .heading2 {
+            font-size: 39px;
+            color: rgb(0, 0, 0);
+            width: 67%;
+            margin: 23px auto;
+        }
+
+        .name {
+            width: 38%;
+            margin: 25px 15px;
+            padding: 10px 13px;
+            /* background-color: #f8a200; */
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            background-color: #5fc862;
+            border: 3px solid rgb(6, 6, 6);
+        }
+
+        .email {
+            width: 88%;
+            margin: -7px 15px;
+            padding: 10px 13px;
+            /* background-color: #f8a200; */
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            background-color: #5fc862;
+            border: 3px solid rgb(6, 6, 6);
+        }
+
+        .pass {
+            width: 88%;
+            margin: 25px 15px;
+            padding: 13px 13px;
+            /* background-color: #f8a200; */
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            background-color: #5fc862;
+            border: 3px solid rgb(6, 6, 6);
+        }
+
+        .tel {
+            width: 38%;
+            margin: -3px 15px;
+            padding: 10px 13px;
+            /* background-color: #f8a200; */
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            background-color: #5fc862;
+            border: 3px solid rgb(6, 6, 6);
+        }
+
+        .country {
+            width: 44%;
+            margin: 0px 15px;
+            padding: 10px 13px;
+            /* background-color: #f8a200; */
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            background-color: #5fc862;
+            border: 3px solid rgb(6, 6, 6);
+        }
+
+        .submit {
+            background-color: #5fc862;
+            /* background-color: #f8a200; */
+            width: 41%;
+            margin: 55px 164px;
+            padding: 13px 9px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 6px;
+            border: 3px solid rgb(6, 6, 6);
+
+        }
+
+        .submit:hover {
+            background-color: #53be59;
+        }
+
+        .login {
+            width: 40%;
+            margin: -30px 178px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #4258c6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading1">GTA-6 (EARLY ACCESS)</h1>
+    <div class="container2">
+        <h1 class="heading2">Create a new account</h1>
+        <hr>
+        <form class="form" name="RegForm" onsubmit="return done()">
+            <input class="name" id="first_name" type="text" name="FirstName" placeholder="First Name">
+            <input class="name" id="last_name" type="text" name="LastName" placeholder="Last Name">
+            <input class="email" id="e-mail" type="email" name="Email" placeholder="Email">
+            <input class="pass" id="password" type="text" name="Password" placeholder="Password">
+            <input class="tel" id="number" type="tel" name="Number" placeholder="Contact Number">
+            <select class="country" name="" id="">
+                <option style="background-color: #a8d8aa ;" value="">Select Country</option>
+                <option style="background-color: #a8d8aa ;" value="">India</option>
+                <option style="background-color: #a8d8aa ;" value="">Turkey</option>
+                <option style="background-color: #a8d8aa ;" value="">Nepal</option>
+                <option style="background-color: #a8d8aa ;" value="">Bhutan</option>
+            </select>
+            <input class="submit" type="submit" value="Sign up">
+        </form>
+        <div class="login">
+            Already have an account?
+             <a href="5.2hw.html" target="_blank" >Log In</a>
+        </div>
+    </div>
+
+
+    <script>
+        function done(){
+              var firstname = document.getElementById("first_name").value;
+              var lastname = document.getElementById("last_name").value;
+              var email = document.getElementById("e-mail").value;
+              var password = document.getElementById("password").value;
+              var number = document.getElementById("number").value;
+              var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+              if(firstname == ""){
+                alert("Please enter your first name");
+                focus()
+                return false;
+              }
+              if(lastname == ""){
+                alert("Please enter your last name");
+                return false;
+              }
+              if(email == "" || !regEmail.test(email)){
+                alert("Please enter your email");
+                return false;
+              } 
+              if(password == ""){
+                alert("Please enter your password");
+                return false;
+              }
+              if(number == ""){
+                alert("Please enter your number");
+                return false;
+              }
+        }
+    </script>
+</body> 
+
+</html>
